@@ -1,12 +1,10 @@
-import javax.swing.*;
-
+//importar metodo statico -> evitar escrever nome da classe.
+import static javax.swing.JOptionPane.*;
+import static java.lang.Integer.parseInt;
 public class Main {
     public static void main(String[] args) {
-
-    String nome = JOptionPane.showInputDialog("QUAL SEU NOME????");
-        JOptionPane.showMessageDialog(null, "");
-
-
+        Util util = new Util();
+        util.menuPrincipal();
 
 
     }
