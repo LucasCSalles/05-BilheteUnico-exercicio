@@ -108,7 +108,17 @@ public class Util {
     }
 
     private void deletarBilhete() {
-
+        int posicao = verificarUsuario();
+        int respostaUsuario;
+        if(posicao!=-1){
+            respostaUsuario=showConfirmDialog(null, "Deseja mesmo deletar seu bilhete?");
+            if(respostaUsuario == YES_OPTION){
+                bilhete[posicao]=bilhete[index-1];
+                index--;
+            }else {
+                showMessageDialog(null,"Operação cancelada.");
+            }
+        }
     }
     private int verificarUsuario(){
         long cpfUsuario;
